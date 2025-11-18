@@ -19,7 +19,7 @@ For the original documentation, see: [http://vu-programming.gitlab.io/pad/websit
 
 ### Prerequisites
 
-**make** and a **C11-compliant compiler** (such as GCC or Clang) installed on your system.
+**make** and a **C11-compliant compiler** (such as GCC or Clang)
 
 ### Building the Emulator
 
@@ -46,8 +46,23 @@ make clean && make ijvm CFLAGS=-DDEBUG
 #### Automated Testing
 The following make commands are available for verification and quality assurance:
 
-Command,Description
-make testbasic,Run all basic sanity tests.
-make testadvanced,Run all advanced instruction and program tests.
-make testleaks,Check for memory leaks using Valgrind.
-make testsanitizers,Check for memory errors/undefined behavior (requires LLVM). 
+Run all basic sanity tests.
+```bash
+make testbasic
+```
+
+Run all advanced instruction and program tests.
+```bash
+make testadvanced
+```
+
+Check for memory leaks using Valgrind.
+```bash
+make testleaks
+```
+
+Check for memory errors/undefined behavior (requires LLVM).
+```bash
+make testsanitizers
+```
+
